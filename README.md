@@ -1,0 +1,1 @@
+# singleInheritance_by_using_with_returntype-and-with-parameter
