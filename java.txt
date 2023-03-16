@@ -1,0 +1,95 @@
+package homework;
+import java.util.*;
+
+class Accept{
+	
+	double base,height,side,Area_of_tri,Area_of_squ;
+	
+	Scanner sc = new Scanner(System.in);
+	void Triangle()
+	{
+		System.out.print("Enter Value of Base   : ");
+		base=sc.nextDouble();
+		System.out.print("Enter Value of height : ");
+		height=sc.nextDouble();
+	}
+	
+	void Square()
+	{
+		System.out.print("Enter Value of Side : ");
+		side=sc.nextDouble();
+	}
+}
+
+class Area extends Accept
+{
+	
+	
+	double Area_of_tri(double base, double height)
+	{
+		
+		Area_of_tri=0.5*base*height;
+		System.out.println("Area of Triangle : "+Area_of_tri+" sq.cm");
+		
+		return Area_of_tri;
+	}
+	
+	
+	double Area_of_squ(double side)
+	{
+		
+		Area_of_squ=side*side;
+		System.out.println("Area of Square : "+Area_of_squ+" sq.cm");
+		return Area_of_squ;
+	}
+	
+	
+}
+
+
+
+public class singleInheritance {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		Area obj = new Area();
+		
+		int ch;
+		
+		System.out.println("------------------------");
+		System.out.println("1.Area of Triangle ");
+		System.out.println("2.Area of Square ");
+		System.out.println("3.Exit ");
+		System.out.println("------------------------");
+		
+		do {
+			
+			System.out.print("\nEnter Your Choice : ");
+			ch=sc.nextInt();
+	
+			switch(ch)
+			{
+				case 1:
+					obj.Triangle();
+					obj.Area_of_tri(obj.base, obj.height);
+					break;
+				case 2:
+					obj.Square();
+					obj.Area_of_squ(obj.side);
+					break;
+				case 3:
+					System.out.println("Succesfully Exit....");
+					break;
+				default:
+					System.out.println("Enter Correct Choice");
+					
+		
+			}
+		}while(ch!=3);
+		
+		
+
+	}
+
+}
